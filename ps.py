@@ -2,9 +2,9 @@
 
 from   pyvisa import ResourceManager
 
-def psinit():
+def psinit(name):
     rm = ResourceManager()
-    instr = rm.open_resource("USB0::0x0AAD::0x0135::035375056::INSTR")
+    instr = rm.open_resource(name)
     return instr
 
 def pssel(instr,ch):
